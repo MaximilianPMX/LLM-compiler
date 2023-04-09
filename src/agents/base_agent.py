@@ -1,14 +1,21 @@
-class Agent:
-    def __init__(self, name: str, description: str):
+class BaseAgent:
+    """
+    Base class for all agents.
+    """
+    def __init__(self):
         """
-        Base class for all agents.
+        Initializes the BaseAgent.
+        """
+        pass
+
+    def run(self, task: str) -> str:
+        """
+        Executes the agent's main logic.
 
         Args:
-            name (str): The name of the agent.
-            description (str): A brief description of the agent's purpose.
-        """
-        self.name = name
-        self.description = description
+            task (str): The task to be executed.
 
-    def __str__(self):
-        return f"Agent(name='{self.name}', description='{self.description}')"
+        Returns:
+            str: The result of the task execution.
+        """
+        raise NotImplementedError

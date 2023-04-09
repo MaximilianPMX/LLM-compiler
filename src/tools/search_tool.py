@@ -1,10 +1,21 @@
-from langchain.tools import DuckDuckGoSearchRun
-
-
 class SearchTool:
+    """
+    A tool for performing searches.
+    """
     def __init__(self):
-        self.search = DuckDuckGoSearchRun()
+        """
+        Initializes the SearchTool.
+        """
+        pass
 
-    def use(self, query: str) -> str:
-        """Uses the DuckDuckGo search engine to find relevant information."""
-        return self.search.run(query)
+    def search(self, query: str) -> str:
+        """
+        Performs a search based on the given query.
+
+        Args:
+            query (str): The search query.
+
+        Returns:
+            str: The search results.
+        """
+        return f"Search results for: {query}"

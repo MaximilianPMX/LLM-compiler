@@ -1,21 +1,23 @@
-from typing import List
-
-
-def split_text(text: str, chunk_size: int, chunk_overlap: int = 0) -> List[str]:
-    """Splits a long text into smaller chunks.
-
-    Args:
-        text: The input text.
-        chunk_size: The maximum size of each chunk.
-        chunk_overlap: The number of overlapping characters between chunks.
-
-    Returns:
-        A list of text chunks.
+class TextSplitter:
     """
-    chunks = []
-    start = 0
-    while start < len(text):
-        end = min(start + chunk_size, len(text))
-        chunks.append(text[start:end])
-        start += chunk_size - chunk_overlap
-    return chunks
+    A tool for splitting text into smaller chunks.
+    """
+    def __init__(self):
+        """
+        Initializes the TextSplitter.
+        """
+        pass
+
+    def split_text(self, text: str, chunk_size: int) -> list[str]:
+        """
+        Splits the given text into chunks of the specified size.
+
+        Args:
+            text (str): The text to split.
+            chunk_size (int): The desired size of each chunk.
+
+        Returns:
+            list[str]: A list of text chunks.
+        """
+        chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
+        return chunks

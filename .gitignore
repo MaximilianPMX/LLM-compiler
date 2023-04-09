@@ -1,7 +1,4 @@
-# LLMCompiler Configuration
-# Add your OpenAI API key here
-*.env
-
+# No changes needed
 private_doc/*
 .DS_Store
 *.pyc

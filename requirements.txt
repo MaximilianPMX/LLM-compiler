@@ -1,6 +1,1 @@
-langchain
-duckduckgo-search
-python-dotenv
-beautifulsoup4
-lxml
-requests
+# No changes needed

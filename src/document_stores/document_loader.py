@@ -1,30 +1,27 @@
 class DocumentLoader:
-    def load_document(self, source: str) -> str:
-        """Loads a document from a specified source (file or URL)."""
+    """
+    A class for loading documents from various sources.
+    """
+    def __init__(self):
+        """
+        Initializes the DocumentLoader.
+        """
+        pass
+
+    def load_document(self, file_path: str) -> str:
+        """
+        Loads a document from a file.
+
+        Args:
+            file_path (str): The path to the document file.
+
+        Returns:
+            str: The content of the document, or an empty string if loading fails.
+        """
         try:
-            # Check if the source is a file path
-            with open(source, 'r') as f:
-                return f.read()
+            with open(file_path, 'r') as f:
+                document = f.read()
+            return document
         except FileNotFoundError:
-            raise FileNotFoundError(f"File not found: {source}")
-        except Exception as e:
-            raise Exception(f"Error loading document from {source}: {e}")
-
-
-if __name__ == '__main__':
-    # Example Usage, create a dummy file
-    with open('test.txt', 'w') as f:
-        f.write('This is a test document.\nIt has multiple lines.')
-
-    loader = DocumentLoader()
-    try:
-        content = loader.load_document('test.txt')
-        print(content)
-
-        # Example of handling file not found
-        # content = loader.load_document('non_existent_file.txt')
-        # print(content)
-    except FileNotFoundError as e:
-        print(e)
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+            print(f"Error: Document file not found at {file_path}")
+            return ""
