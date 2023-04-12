@@ -1,0 +1,6 @@
+{
+  "search_tool": {
+    "api_key": "YOUR_SEARCH_API_KEY",
+    "max_results": 5
+  }
+}
