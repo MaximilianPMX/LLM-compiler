@@ -1,6 +1,6 @@
-openai
-requests
+langchain
+duckduckgo-search
+python-dotenv
 beautifulsoup4
 lxml
-tiktoken
-python-dotenv
+requests
