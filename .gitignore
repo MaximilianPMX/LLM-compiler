@@ -1,39 +1,8 @@
-# Private documents
-private_doc/
-
-# Environment variables
-.env
-
-# Large model files or data
-*.log
-data/
-
-# Python bytecode
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Compiled source #
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Distribution / packaging
-.Python
-_build/
-dist/
-downloads/
-*.egg-info/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# VS Code
-.vscode/
+# LLMCompiler Configuration
+# Add your OpenAI API key here
+*.env
 
 private_doc/*
 .DS_Store
+*.pyc
+__pycache__/

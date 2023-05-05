@@ -1,16 +1,13 @@
-# src/config/config_loader.py
-
-import json
+import os
+from dotenv import load_dotenv
 
 class ConfigLoader:
-    def __init__(self, config_file):
-        self.config_file = config_file
+    def __init__(self, env_file=".env"):
+        load_dotenv(dotenv_path=env_file)
+        self.config = os.environ
 
-    def load_config(self):
-        try:
-            with open(self.config_file, 'r') as f:
-                config = json.load(f)
-            return config
-        except FileNotFoundError:
-            print(f"Error: Configuration file not found: {self.config_file}")
-            return None
+    def get(self, key, default=None):
+        return self.config.get(key, default)
+
+    def set(self, key, value):
+        self.config[key] = value
