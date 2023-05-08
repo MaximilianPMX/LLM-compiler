@@ -1,44 +1,39 @@
-# Byte-compiled / optimized / DLL files
+# Private documents
+private_doc/
+
+# Environment variables
+.env
+
+# Large model files or data
+*.log
+data/
+
+# Python bytecode
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# Compiled source #
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
 # Distribution / packaging
 .Python
-build/
+_build/
 dist/
-venv/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-.installed.cfg
+downloads/
 *.egg-info/
-_version.py
-
-# Installers
-*.egg
-
-# Log files
-*.log
-
-# Dependency Management
-package-lock.json
-yarn-error.log
-
-# Environment variable files
-.env
-*.env
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# OS generated files
-.DS_Store
-Thumbs.db
+# VS Code
+.vscode/
 
-#Private documents may contain personal identifiable information, should not be committed.
-private_doc/
 private_doc/*
-*.pyc
+.DS_Store
