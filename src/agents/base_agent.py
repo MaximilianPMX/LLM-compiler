@@ -1,8 +1,14 @@
-# src/agents/base_agent.py
+class Agent:
+    def __init__(self, name: str, description: str):
+        """
+        Base class for all agents.
 
-class BaseAgent:
-    def __init__(self):
-        pass
+        Args:
+            name (str): The name of the agent.
+            description (str): A brief description of the agent's purpose.
+        """
+        self.name = name
+        self.description = description
 
-    def run(self, task_description):
-        raise NotImplementedError
+    def __str__(self):
+        return f"Agent(name='{self.name}', description='{self.description}')"
