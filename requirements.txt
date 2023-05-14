@@ -1,4 +1,6 @@
-langchain
-transformers
-faiss-cpu
 openai
+requests
+beautifulsoup4
+lxml
+tiktoken
+python-dotenv
