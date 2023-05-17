@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+venv/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+.installed.cfg
+*.egg-info/
+_version.py
+
+# Installers
+*.egg
+
+# Log files
+*.log
+
+# Dependency Management
+package-lock.json
+yarn-error.log
+
+# Environment variable files
+.env
+*.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+#Private documents may contain personal identifiable information, should not be committed.
+private_doc/
+private_doc/*
+*.pyc
